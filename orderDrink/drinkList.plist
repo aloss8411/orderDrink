@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>芋泥波波布雷</string>
+		<key>price</key>
+		<integer>70</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>芋泥波波鮮奶</string>
+		<key>price</key>
+		<integer>65</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>芒果果粒茶</string>
+		<key>price</key>
+		<integer>60</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>芝芝芒果果粒</string>
+		<key>price</key>
+		<integer>55</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>芝芝金萱3Q</string>
+		<key>price</key>
+		<integer>50</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>芝芝金萱雙Ｑ</string>
+		<key>price</key>
+		<integer>45</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>芝芝草莓果粒</string>
+		<key>price</key>
+		<integer>70</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>芝芝翡翠綠茶</string>
+		<key>price</key>
+		<integer>35</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>楊枝甘露</string>
+		<key>price</key>
+		<integer>80</integer>
+	</dict>
+</array>
+</plist>

@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD2591042768710200A29CE4 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2591032768710200A29CE4 /* enums.swift */; };
+		AD2591082769FFC800A29CE4 /* GetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2591072769FFC800A29CE4 /* GetList.swift */; };
+		AD8CF88E2730E857003A1B21 /* loadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8CF88D2730E857003A1B21 /* loadingVC.swift */; };
+		AD8CF8902730E870003A1B21 /* introVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8CF88F2730E870003A1B21 /* introVC.swift */; };
+		AD8CF89227312042003A1B21 /* orderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8CF89127312042003A1B21 /* orderVC.swift */; };
+		AD8CF89427312059003A1B21 /* shopCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8CF89327312059003A1B21 /* shopCarVC.swift */; };
+		AD8CF89627313097003A1B21 /* orderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8CF89527313097003A1B21 /* orderCell.swift */; };
+		AD8CF898273130B3003A1B21 /* shopCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8CF897273130B3003A1B21 /* shopCarCell.swift */; };
+		AD8CF89A273133E5003A1B21 /* drinkList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD8CF899273133E5003A1B21 /* drinkList.plist */; };
 		ADAB718C272A83D2005841BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB718B272A83D2005841BC /* AppDelegate.swift */; };
 		ADAB718E272A83D2005841BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB718D272A83D2005841BC /* SceneDelegate.swift */; };
-		ADAB7190272A83D2005841BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB718F272A83D2005841BC /* ViewController.swift */; };
 		ADAB7193272A83D2005841BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAB7191272A83D2005841BC /* Main.storyboard */; };
 		ADAB7196272A83D2005841BC /* orderDrink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADAB7194272A83D2005841BC /* orderDrink.xcdatamodeld */; };
 		ADAB7198272A83D4005841BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADAB7197272A83D4005841BC /* Assets.xcassets */; };
@@ -17,6 +25,7 @@
 		ADAB71A6272A83D4005841BC /* orderDrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB71A5272A83D4005841BC /* orderDrinkTests.swift */; };
 		ADAB71B0272A83D4005841BC /* orderDrinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB71AF272A83D4005841BC /* orderDrinkUITests.swift */; };
 		ADAB71B2272A83D4005841BC /* orderDrinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB71B1272A83D4005841BC /* orderDrinkUITestsLaunchTests.swift */; };
+		ADD30D952754C35700C3DD1B /* orderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD30D942754C35700C3DD1B /* orderList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD2591032768710200A29CE4 /* enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
+		AD2591072769FFC800A29CE4 /* GetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetList.swift; sourceTree = "<group>"; };
+		AD8CF88D2730E857003A1B21 /* loadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadingVC.swift; sourceTree = "<group>"; };
+		AD8CF88F2730E870003A1B21 /* introVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introVC.swift; sourceTree = "<group>"; };
+		AD8CF89127312042003A1B21 /* orderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderVC.swift; sourceTree = "<group>"; };
+		AD8CF89327312059003A1B21 /* shopCarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopCarVC.swift; sourceTree = "<group>"; };
+		AD8CF89527313097003A1B21 /* orderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderCell.swift; sourceTree = "<group>"; };
+		AD8CF897273130B3003A1B21 /* shopCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopCarCell.swift; sourceTree = "<group>"; };
+		AD8CF899273133E5003A1B21 /* drinkList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = drinkList.plist; sourceTree = "<group>"; };
 		ADAB7188272A83D2005841BC /* orderDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orderDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADAB718B272A83D2005841BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADAB718D272A83D2005841BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADAB718F272A83D2005841BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ADAB7192272A83D2005841BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADAB7195272A83D2005841BC /* orderDrink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = orderDrink.xcdatamodel; sourceTree = "<group>"; };
 		ADAB7197272A83D4005841BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +68,7 @@
 		ADAB71AB272A83D4005841BC /* orderDrinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = orderDrinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADAB71AF272A83D4005841BC /* orderDrinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderDrinkUITests.swift; sourceTree = "<group>"; };
 		ADAB71B1272A83D4005841BC /* orderDrinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderDrinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ADD30D942754C35700C3DD1B /* orderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +96,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD0FF920274F64C00020DD28 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AD8CF88D2730E857003A1B21 /* loadingVC.swift */,
+				AD8CF88F2730E870003A1B21 /* introVC.swift */,
+				AD8CF89127312042003A1B21 /* orderVC.swift */,
+				AD8CF89327312059003A1B21 /* shopCarVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AD0FF921274F64D80020DD28 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				ADD30D942754C35700C3DD1B /* orderList.swift */,
+				AD2591032768710200A29CE4 /* enums.swift */,
+				AD2591072769FFC800A29CE4 /* GetList.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AD0FF922274F64F80020DD28 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				ADAB7191272A83D2005841BC /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		AD0FF923274F676E0020DD28 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AD8CF89527313097003A1B21 /* orderCell.swift */,
+				AD8CF897273130B3003A1B21 /* shopCarCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		ADAB717F272A83D2005841BC = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +157,17 @@
 		ADAB718A272A83D2005841BC /* orderDrink */ = {
 			isa = PBXGroup;
 			children = (
+				AD0FF922274F64F80020DD28 /* view */,
+				AD0FF921274F64D80020DD28 /* model */,
+				AD0FF920274F64C00020DD28 /* ViewController */,
+				AD0FF923274F676E0020DD28 /* Cell */,
 				ADAB718B272A83D2005841BC /* AppDelegate.swift */,
 				ADAB718D272A83D2005841BC /* SceneDelegate.swift */,
-				ADAB718F272A83D2005841BC /* ViewController.swift */,
-				ADAB7191272A83D2005841BC /* Main.storyboard */,
 				ADAB7197272A83D4005841BC /* Assets.xcassets */,
 				ADAB7199272A83D4005841BC /* LaunchScreen.storyboard */,
 				ADAB719C272A83D4005841BC /* Info.plist */,
 				ADAB7194272A83D2005841BC /* orderDrink.xcdatamodeld */,
+				AD8CF899273133E5003A1B21 /* drinkList.plist */,
 			);
 			path = orderDrink;
 			sourceTree = "<group>";
@@ -235,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADAB719B272A83D4005841BC /* LaunchScreen.storyboard in Resources */,
+				AD8CF89A273133E5003A1B21 /* drinkList.plist in Resources */,
 				ADAB7198272A83D4005841BC /* Assets.xcassets in Resources */,
 				ADAB7193272A83D2005841BC /* Main.storyboard in Resources */,
 			);
@@ -261,10 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADAB7190272A83D2005841BC /* ViewController.swift in Sources */,
 				ADAB718C272A83D2005841BC /* AppDelegate.swift in Sources */,
+				AD8CF88E2730E857003A1B21 /* loadingVC.swift in Sources */,
+				ADD30D952754C35700C3DD1B /* orderList.swift in Sources */,
+				AD8CF8902730E870003A1B21 /* introVC.swift in Sources */,
+				AD8CF89427312059003A1B21 /* shopCarVC.swift in Sources */,
+				AD2591082769FFC800A29CE4 /* GetList.swift in Sources */,
+				AD8CF89227312042003A1B21 /* orderVC.swift in Sources */,
 				ADAB718E272A83D2005841BC /* SceneDelegate.swift in Sources */,
+				AD8CF898273130B3003A1B21 /* shopCarCell.swift in Sources */,
+				AD8CF89627313097003A1B21 /* orderCell.swift in Sources */,
 				ADAB7196272A83D2005841BC /* orderDrink.xcdatamodeld in Sources */,
+				AD2591042768710200A29CE4 /* enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
