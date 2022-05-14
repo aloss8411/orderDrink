@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CollectionViewPagingLayout
 
 
 class orderVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
@@ -17,8 +18,11 @@ class orderVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     var selectPrice:Int?
     var selectName:String?
     
+   
     
+    let layout = CollectionViewPagingLayout()
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nameTextfield: UITextField!
     @IBOutlet weak var ice: UISegmentedControl!
     @IBOutlet weak var sugar:UISegmentedControl!
@@ -27,9 +31,16 @@ class orderVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
         super.viewDidLoad()
         
         getPlistData()
-        
+        setupCollectionView()
+        collectionView.collectionViewLayout = layout
     }
-   
+  
+    private func setupCollectionView() {
+          
+            collectionView.isPagingEnabled = true
+            collectionView.dataSource = self
+            view.addSubview(collectionView)
+        }
     
     @IBAction func sendList(_ sender: Any) {
         if nameTextfield.text == ""{
@@ -51,8 +62,8 @@ class orderVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
         let url = URL(string:"https://api.airtable.com/v0/appBZkBtGa7uo2dwl/Drink")
         var request = URLRequest(url: url!)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
         request.setValue("Bearer keyNMHPt7q3Zjx0Ne", forHTTPHeaderField: "Authorization")
+        request.httpMethod = "POST"
         let encoder = JSONEncoder()
         let date  = Date()
         let formatter = DateFormatter()
@@ -67,9 +78,9 @@ class orderVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
         request.httpBody = try? encoder.encode(datas)
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
-                let content = String(data: data, encoding: .utf8)
+                
                 let decoder = JSONDecoder()
-                let PostDataList = try? decoder.decode(PostDataResponse.self, from: data)
+                let _ = try? decoder.decode(PostDataResponse.self, from: data)
                 
             }
         }.resume()
@@ -159,19 +170,18 @@ extension orderVC{
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      
+        selectName = menuList?[indexPath.row].name ?? "輸入未成功"
+        selectPrice = menuList?[indexPath.row].price ?? 0
         
-        selectName = menuList?[indexPath.row].name
-        selectPrice = menuList?[indexPath.row].price
-        
-        //儲存所選擇的變數
-        
+      
     }
-    /*
-
+    
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "orderCell", for: indexPath) as! orderCell
+        cell.BGView.backgroundColor = .clear
     }
-     */
+   
     
     
 }

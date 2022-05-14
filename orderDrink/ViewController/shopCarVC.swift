@@ -92,10 +92,7 @@ class shopCarVC: UITableViewController{
     
 
     
-    
-    
-    
-    
+
     func downloadData(){
             
             let url = URL(string:"https://api.airtable.com/v0/appBZkBtGa7uo2dwl/Drink?maxRecords=20&view=Grid%20view")
@@ -161,7 +158,7 @@ class shopCarVC: UITableViewController{
             //deleteData from Airtable
             let  deleteItem = record?.records[indexPath.row].id
           
-            let url = URL(string: "https://api.airtable.com/v0/appBZkBtGa7uo2dwl/Drink/\(deleteItem)")
+            let url = URL(string: "https://api.airtable.com/v0/appBZkBtGa7uo2dwl/Drink/\(String(describing: deleteItem))")
             var request = URLRequest(url: url!)
             request.httpMethod = "DELETE"
            

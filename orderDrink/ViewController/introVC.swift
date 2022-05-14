@@ -9,11 +9,12 @@ import UIKit
 
 class introVC: UIViewController {
 
+    @IBOutlet weak var Btn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-       
+        Btn.layer.cornerRadius = 20
     }
     
 

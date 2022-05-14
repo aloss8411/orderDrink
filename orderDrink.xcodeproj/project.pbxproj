@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AD2591042768710200A29CE4 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2591032768710200A29CE4 /* enums.swift */; };
 		AD2591082769FFC800A29CE4 /* GetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2591072769FFC800A29CE4 /* GetList.swift */; };
+		AD693DD4282E35A8004CDBC6 /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = AD693DD3282E35A8004CDBC6 /* CollectionViewPagingLayout */; };
 		AD8CF88E2730E857003A1B21 /* loadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8CF88D2730E857003A1B21 /* loadingVC.swift */; };
 		AD8CF8902730E870003A1B21 /* introVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8CF88F2730E870003A1B21 /* introVC.swift */; };
 		AD8CF89227312042003A1B21 /* orderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8CF89127312042003A1B21 /* orderVC.swift */; };
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD693DD4282E35A8004CDBC6 /* CollectionViewPagingLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +207,9 @@
 			dependencies = (
 			);
 			name = orderDrink;
+			packageProductDependencies = (
+				AD693DD3282E35A8004CDBC6 /* CollectionViewPagingLayout */,
+			);
 			productName = orderDrink;
 			productReference = ADAB7188272A83D2005841BC /* orderDrink.app */;
 			productType = "com.apple.product-type.application";
@@ -277,6 +282,9 @@
 				Base,
 			);
 			mainGroup = ADAB717F272A83D2005841BC;
+			packageReferences = (
+				AD693DD2282E35A8004CDBC6 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
+			);
 			productRefGroup = ADAB7189272A83D2005841BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -696,6 +704,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD693DD2282E35A8004CDBC6 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amirdew/CollectionViewPagingLayout.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD693DD3282E35A8004CDBC6 /* CollectionViewPagingLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD693DD2282E35A8004CDBC6 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */;
+			productName = CollectionViewPagingLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		ADAB7194272A83D2005841BC /* orderDrink.xcdatamodeld */ = {
