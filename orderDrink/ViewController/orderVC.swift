@@ -52,9 +52,7 @@ class orderVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
             orderDidSendAlert()
             uploadData()
         }
-        
     }
-    
    
     
     func uploadData(){
