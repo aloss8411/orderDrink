@@ -18,8 +18,6 @@ class orderVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     var selectPrice:Int?
     var selectName:String?
     
-   
-    
     let layout = CollectionViewPagingLayout()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -43,11 +41,10 @@ class orderVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
         }
     
     @IBAction func sendList(_ sender: Any) {
-        if nameTextfield.text == ""{
+        if nameTextfield.text?.isEmpty == true || nameTextfield.text == "" || selectName == nil{
             orderDidNotSendAlert()
         }
         else{
-        
             checkIceAndSugar()
             orderDidSendAlert()
             uploadData()
@@ -163,7 +160,10 @@ extension orderVC{
         
         cell.pics.image = UIImage(named: "image\(indexPath.row)")
         cell.drinkName.text = menuList?[indexPath.row].name
-        cell.drinkPrice.text = "\(String(describing: menuList?[indexPath.row].price))"
+        if let list = menuList?[indexPath.row]{
+            cell.drinkPrice.text = String(list.price) + "元"
+        }
+        
         
         return cell
     }

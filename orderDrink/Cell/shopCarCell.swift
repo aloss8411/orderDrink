@@ -14,7 +14,8 @@ class shopCarCell: UITableViewCell {
     @IBOutlet weak var drinkIce: UILabel!
     @IBOutlet weak var drinkSugar: UILabel!
     @IBOutlet weak var drinkPrice: UILabel!
-    
+    @IBOutlet weak var BGViews: UIView!
+    @IBOutlet weak var date: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

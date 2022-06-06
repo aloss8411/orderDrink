@@ -16,6 +16,7 @@ struct getData:Codable{
        
         var fields:fields
         var id:String
+        var createdTime:String
         struct fields:Codable{
             
             var name:String? = nil

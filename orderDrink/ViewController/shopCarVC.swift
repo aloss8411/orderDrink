@@ -19,7 +19,6 @@ class shopCarVC: UITableViewController{
             }
           
         }
-        
         willSet{
             //值被更新前就開始此段程式
             DispatchQueue.main.async {
@@ -30,18 +29,10 @@ class shopCarVC: UITableViewController{
         }
         
     }
-    
-    
-    
-    
-    
     var deleteRecords:dataDelete?
     var IdRecords:[String]?
-    
     let indicator = UIActivityIndicatorView()
-    
-    
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,9 +67,7 @@ class shopCarVC: UITableViewController{
     
     //開啟與關閉
     func indicatorSwitch(indicator:UIActivityIndicatorView,status:Bool){
-       
-        
-        
+      
         if status == true{
             indicator.stopAnimating()
             indicator.isHidden = true
@@ -88,11 +77,6 @@ class shopCarVC: UITableViewController{
             indicator.isHidden = false
         }
     }
-    
-    
-
-    
-
     func downloadData(){
             
             let url = URL(string:"https://api.airtable.com/v0/appBZkBtGa7uo2dwl/Drink?maxRecords=20&view=Grid%20view")
@@ -115,11 +99,6 @@ class shopCarVC: UITableViewController{
             }.resume()
     }
     
-   
-    
-    
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -140,64 +119,27 @@ class shopCarVC: UITableViewController{
         cell.drinkPrice.text = record?.records[indexPath.row].fields.price
         cell.drinkSugar.text = record?.records[indexPath.row].fields.Sugar
         cell.drinkIce.text = record?.records[indexPath.row].fields.Ice
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy.MM.dd"
+        cell.date.text = record?.records[indexPath.row].createdTime
+        cell.BGViews.backgroundColor = .orange
+        cell.BGViews.layer.cornerRadius = 20
+        
         return cell
         
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 125
+        return 200
     }
 
-    //delete 研究使用方式
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle:UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{
-            
-            
-           
-            //deleteData from Airtable
-            let  deleteItem = record?.records[indexPath.row].id
-          
-            let url = URL(string: "https://api.airtable.com/v0/appBZkBtGa7uo2dwl/Drink/\(String(describing: deleteItem))")
-            var request = URLRequest(url: url!)
-            request.httpMethod = "DELETE"
-           
-            request.setValue("Bearer keyNMHPt7q3Zjx0Ne", forHTTPHeaderField: "Authorization")
-            
-            
-            URLSession.shared.dataTask(with: request) { data, response, error in
-                if let data = data {
-                    let decoder = JSONDecoder()
-                    do {
-                        self.deleteRecords = try decoder.decode(dataDelete.self, from: data)
-                        print(self.deleteRecords?.deleted ?? false)
-                    }
-                    catch{
-                        print(error)
-                    }
-                }
-            }
-            
-            
-            tableView.reloadData()
-        }
-        if editingStyle == .insert{
-            
-        }
-    }
+        
+   
     
     
     
 }
 
-//傳遞資料的製作
-extension shopCarVC{
-    
-    //download data from airtable
-    
-    
-    
-}
 
 
 
